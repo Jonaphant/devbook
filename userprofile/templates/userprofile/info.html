@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container">
+    <!--<div class="row justify-content-center no-gutters mt-5">-->
+        <!--<div class="col-3">-->
+            <!--<button class="btn btn-info w-100">Upload Image</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    {% if url %}
+        <div class="row justify-content-center no-gutters my-3">
+            <div class="col-8">
+                <img class="img-fluid border rounded" src="{{url}}" alt="random" width="500px" height="auto">
+            </div>
+        </div>
+    {% else %}
+        <h1>No Image</h1>
+    {% endif %}
+    <!--<form action="">{% csrf_token %}-->
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Id</span>
+          </div>
+          <input id="id" type="text" class="form-control" placeholder="Id" aria-label="Username" value="{{info.id}}">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Name</span>
+          </div>
+          <input id="name" type="text" class="form-control" placeholder="Name" aria-label="Username" value="{{info.name}}">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Email</span>
+          </div>
+          <input id="email" type="text" class="form-control" placeholder="Email" aria-label="Username" value="{{info.email}}">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Password</span>
+          </div>
+          <input id="password" type="text" class="form-control" placeholder="Password" aria-label="Username" value="{{info.password}}">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Date of Birth</span>
+          </div>
+          <input id="dob" type="text" class="form-control" placeholder="" aria-label="Username" value="{{info.dob}}">
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Biography</span>
+          </div>
+          <textarea id="bio" class="form-control" aria-label="With textarea">{{info.bio}}</textarea>
+        </div>
+        <button id="saveBtn" class="btn btn-primary">Update</button>
+        <!--<input id="saveBtn" class="btn btn-primary" type="submit">-->
+    <!--</form>-->
+</div>
+
+
+
+    <!--<div id="parentdiv" class="container border border-dark">-->
+      <!--<div id="childdiv" class="row border border-success">-->
+        <!--<div class="col border border-danger">-->
+          <!--A-->
+        <!--</div>-->
+        <!--<div class="col border border-warning">-->
+          <!--B-->
+        <!--</div>-->
+        <!--<div class="col border border-info">-->
+          <!--C-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+    <!--<hr>-->
+
+    <!--<div class="container border border-danger">-->
+        <!--<div class="row justify-content-center">-->
+            <!--<div class="col-1 border border-danger">A</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col">B</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col">C</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+{% endblock %}
