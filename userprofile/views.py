@@ -39,3 +39,6 @@ def updateInfo(request, user_id):
     user.save()
 
     return HttpResponse(status=200)
+
+
+#test comment
