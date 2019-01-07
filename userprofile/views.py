@@ -41,6 +41,4 @@ def updateInfo(request, user_id):
     return HttpResponse(status=200)
 
 
-#This is a comment done locally
-#test comment
-#This is a new test comment
+
